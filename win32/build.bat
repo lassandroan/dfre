@@ -11,6 +11,9 @@ rem -------------------------------------
 
 set CompilerOptions=-DDFRE_WIN32
 
+rem Use C++14 standard (C++11 option not available in MSVC)
+set CompilerOptions=%CompilerOptions% /std:c++14
+
 rem Disables extra printing
 set CompilerOptions=%CompilerOptions% -nologo
 

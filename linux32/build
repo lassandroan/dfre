@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CompilerOptions="-DDFRE_NIX32 "
+CompilerOptions+="-std=c++11 "
 CompilerOptions+="-fno-exceptions -fno-asynchronous-unwind-tables "
 CompilerOptions+="-fno-stack-protector "
 CompilerOptions+="-m32 "
