@@ -41,6 +41,10 @@ extern "C" {
                              (void*)prot);
     }
 
+    // NOTE: Under clang -ffreestanding and -nostdlib builds are required
+    // to provide certain functions such as memcpy() and memset()... even if
+    // the source code doesn't directly call these functions. Reference:
+    // http://lists.llvm.org/pipermail/cfe-dev/2012-May/021781.html
     void* memset(void *addr, int val, size_t length) {
         uint8_t *d = (uint8_t*)addr;
         for (; length; length--, d++) {
